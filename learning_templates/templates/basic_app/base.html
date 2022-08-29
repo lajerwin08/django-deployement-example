@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-static-top navbar-inverse">
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li><a class="navbar-brand" href="{% url 'index' %}">BRAND</li></a>
+          <li><a class="navbar-link" href="{% url 'admin:index' %}">Log in as Admin</li></a>
+          <li><a class="navbar-link" href="{% url 'index' %}">Home</li></a>
+          <li><a class="navbar-link" href="{% url 'basic_app:other' %}">Other</li></a>
+        </ul>
+
+    </nav>
+  </div>
+    <div class="container">
+      {% block body_block %}
+      <!-- Anyhtong outside of this will be inherited -->
+      {% endblock %}
+    </div>
+  </body>
+</html>
